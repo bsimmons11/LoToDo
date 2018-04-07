@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoToDo-->
+        <!--Items-->
         <scene sceneID="Pdx-bX-JeN">
             <objects>
                 <tableViewController id="Av2-DG-6Dx" customClass="ToDoListViewController" customModule="LoToDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,9 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="YpW-Ti-H22">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Av2-DG-6Dx" id="fmg-kC-BEn"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" id="diJ-1A-g7I">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="diJ-1A-g7I" id="vjN-O5-7cR">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -32,7 +40,7 @@
                             <outlet property="delegate" destination="Av2-DG-6Dx" id="0hr-lF-VQm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="LoToDo" id="2BA-sc-5M4">
+                    <navigationItem key="navigationItem" title="Items" id="2BA-sc-5M4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HQc-KD-jQj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -43,7 +51,46 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3Y-O2-sud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="194.75262368815595"/>
+            <point key="canvasLocation" x="2342" y="210"/>
+        </scene>
+        <!--LoToDo-->
+        <scene sceneID="92t-7S-xDp">
+            <objects>
+                <tableViewController id="N3N-Nb-6cr" customClass="CategoryViewController" customModule="LoToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="619-fU-JZR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="xB2-YY-79S">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xB2-YY-79S" id="S2T-3Z-Ii7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="N3N-Nb-6cr" id="BIv-St-dDz"/>
+                            <outlet property="delegate" destination="N3N-Nb-6cr" id="wdg-WJ-62W"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="LoToDo" id="chL-MA-DbB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="e1n-Af-gy1">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="N3N-Nb-6cr" id="MGD-bR-7Ds"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Av2-DG-6Dx" kind="show" identifier="goToItems" id="nqQ-wX-NqB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGw-V7-0te" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="209"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UhF-rw-gx9">
@@ -60,12 +107,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Av2-DG-6Dx" kind="relationship" relationship="rootViewController" id="7cX-jx-Fi9"/>
+                        <segue destination="N3N-Nb-6cr" kind="relationship" relationship="rootViewController" id="guQ-Pz-Pzf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lga-OB-rKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="640.79999999999995" y="194.75262368815595"/>
+            <point key="canvasLocation" x="639" y="209"/>
         </scene>
     </scenes>
 </document>
