@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D48FB6D7B3B43B378E66506 /* Pods_LoToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6A2A2F5B59C7A93DCD48AA /* Pods_LoToDo.framework */; };
 		9508A0B420792830004AFF6B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508A0B320792830004AFF6B /* CategoryViewController.swift */; };
 		95D77CBE2072FF8C0006098B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D77CBC2072FF8C0006098B /* DataModel.xcdatamodeld */; };
 		95F66712206FCE3A00133DAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F66711206FCE3A00133DAE /* AppDelegate.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		115AA2B732476A98CEEE03C7 /* Pods-LoToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoToDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoToDo/Pods-LoToDo.debug.xcconfig"; sourceTree = "<group>"; };
+		320E8DF4389FFEB5716E5903 /* Pods-LoToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoToDo/Pods-LoToDo.release.xcconfig"; sourceTree = "<group>"; };
+		8B6A2A2F5B59C7A93DCD48AA /* Pods_LoToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9508A0B320792830004AFF6B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		95D77CBD2072FF8C0006098B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		95F6670E206FCE3A00133DAE /* LoToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,12 +37,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D48FB6D7B3B43B378E66506 /* Pods_LoToDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48BA836B739F0344C80ADE7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B6A2A2F5B59C7A93DCD48AA /* Pods_LoToDo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		95D65BD620711035008646CA /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,8 @@
 			children = (
 				95F66710206FCE3A00133DAE /* LoToDo */,
 				95F6670F206FCE3A00133DAE /* Products */,
+				F9C5922A8663B49736F1905C /* Pods */,
+				48BA836B739F0344C80ADE7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +117,15 @@
 			path = LoToDo;
 			sourceTree = "<group>";
 		};
+		F9C5922A8663B49736F1905C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				115AA2B732476A98CEEE03C7 /* Pods-LoToDo.debug.xcconfig */,
+				320E8DF4389FFEB5716E5903 /* Pods-LoToDo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95F66720206FCE3B00133DAE /* Build configuration list for PBXNativeTarget "LoToDo" */;
 			buildPhases = (
+				D740A6FB4AF313876A415DC1 /* [CP] Check Pods Manifest.lock */,
 				95F6670A206FCE3A00133DAE /* Sources */,
 				95F6670B206FCE3A00133DAE /* Frameworks */,
 				95F6670C206FCE3A00133DAE /* Resources */,
+				97CBA000701F0EC87C334C95 /* [CP] Embed Pods Frameworks */,
+				4DFBC5B6153D930BF127ABD4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DFBC5B6153D930BF127ABD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoToDo/Pods-LoToDo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97CBA000701F0EC87C334C95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LoToDo/Pods-LoToDo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoToDo/Pods-LoToDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D740A6FB4AF313876A415DC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoToDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		95F6670A206FCE3A00133DAE /* Sources */ = {
@@ -318,15 +401,13 @@
 		};
 		95F66721206FCE3B00133DAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 115AA2B732476A98CEEE03C7 /* Pods-LoToDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y56MS5GDTQ;
 				INFOPLIST_FILE = LoToDo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lorux.LoToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -336,15 +417,13 @@
 		};
 		95F66722206FCE3B00133DAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 320E8DF4389FFEB5716E5903 /* Pods-LoToDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y56MS5GDTQ;
 				INFOPLIST_FILE = LoToDo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lorux.LoToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
